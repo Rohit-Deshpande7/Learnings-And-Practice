@@ -32,26 +32,30 @@ public class homePage extends basePage{
     {
         signUp.click();
     }
-    public void FirstName()
+    public void FirstName(String fname)
     {
+
         FirstName.clear();
         FirstName.click();
+        FirstName.sendKeys(fname);
     }
-    public void LastName()
+    public void LastName(String lname)
     {
         LastName.clear();
         LastName.click();
+        LastName.sendKeys(lname);
     }
-    public void EmailAddress()
+    public void EmailAddress(String emailAdd)
     {
         EmailAddress.clear();
         EmailAddress.click();
+        EmailAddress.sendKeys(emailAdd);
     }
-
-    public void Password()
+    public void Password(String pass)
     {
         Password.clear();
         Password.click();
+        Password.sendKeys(pass);
     }
 
     public void Create()
