@@ -6,7 +6,7 @@ import testBase.baseClass;
 
 public class TC_signUp extends baseClass {
 
-    @Test
+    @Test(priority = 1)
     public void validSignUp() throws InterruptedException {
         homePage hp = new homePage(driver);
 
@@ -16,10 +16,7 @@ public class TC_signUp extends baseClass {
         hp.LastName(randomString().toUpperCase());
         hp.EmailAddress(p.getProperty("Email_Address"));
         hp.Password(p.getProperty("password"));
-
-
         hp.Create();
-        Thread.sleep(20000);
 
     }
 }
