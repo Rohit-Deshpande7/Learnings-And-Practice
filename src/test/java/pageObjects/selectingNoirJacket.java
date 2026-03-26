@@ -20,6 +20,11 @@ public class selectingNoirJacket extends basePage{
     @FindBy(xpath = "//*[@id='add']")
     WebElement addToCart;
 
+    @FindBy(xpath = "//*[@id='minicart']/a[1]")
+    WebElement clickMyCart;
+
+
+
     public void setHome()
     {
         home.click();
@@ -34,5 +39,11 @@ public class selectingNoirJacket extends basePage{
     {
         addToCart.click();
     }
+
+    public void setClickMyCart()
+    {
+        clickMyCart.click();
+    }
+
 
 }

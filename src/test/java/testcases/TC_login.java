@@ -17,5 +17,6 @@ public class TC_login extends baseClass{
         lg.setEmailAddress(p.getProperty("Email_Address"));
         lg.setPassword(p.getProperty("password"));
         lg.signInClick();
+
     }
 }

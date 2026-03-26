@@ -1,11 +1,12 @@
 package pageObjects;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class homePage extends basePage{
-    public homePage(WebDriver driver)
+public class signUpPage extends basePage{
+    public signUpPage(WebDriver driver)
     {
         super(driver);
     }
@@ -27,6 +28,9 @@ public class homePage extends basePage{
 
     @FindBy(xpath = "//*[@class='action_bottom']/input")
     WebElement Create;
+
+    @FindBy(xpath = "//*[@id=\"create-account\"]/div[5]//div/section/div/div[1]/button/svg")
+    WebElement popUpClose;
 
     public void signUp()
     {
@@ -58,6 +62,10 @@ public class homePage extends basePage{
         Password.sendKeys(pass);
     }
 
+    public void setPopUp()
+    {
+        popUpClose.click();
+    }
     public void Create()
     {
         Create.click();
